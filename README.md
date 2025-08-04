@@ -46,22 +46,14 @@ plugins:
 # 类型过滤配置
 type_filter:
   enabled_types:
-    - uc          # UC浏览器网盘
-    - quark       # 夸克网盘
-    - xunlei      # 迅雷网盘
+    - uc          
+    - quark       
+    - xunlei      
   # filter_mode: "include" - 只显示enabled_types中的类型
   # filter_mode: "exclude" - 不显示enabled_types中的类型
   # filter_mode: "none" - 不进行过滤，显示所有类型
   filter_mode: "exclude"
 
-# 应用配置
-debug: false      # 调试模式
-cache_ttl: 300    # 缓存时间(秒)
-
-# 搜索配置
-search:
-  max_concurrent: 10  # 最大并发数
-  retry_times: 3      # 重试次数
 ```
 
 
