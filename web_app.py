@@ -61,19 +61,50 @@ def display_search_results(response: SearchResponse):
         background-color: #fff;
         transition: box-shadow 0.3s ease;
     }
+    
+    @media (prefers-color-scheme: dark) {
+        .result-card {
+            border: 1px solid #444;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            background-color: #2d2d2d;
+        }
+    }
+    
     .result-card:hover {
         box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
+    
+    @media (prefers-color-scheme: dark) {
+        .result-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+    }
+    
     .result-title {
         margin: 0 0 1rem 0;
         color: #333;
         font-size: 1.2rem;
         font-weight: bold;
     }
+    
+    @media (prefers-color-scheme: dark) {
+        .result-title {
+            color: #ddd;
+        }
+    }
+    
     .result-meta {
         margin: 0.5rem 0;
         font-size: 0.9rem;
+        color: #333;
     }
+    
+    @media (prefers-color-scheme: dark) {
+        .result-meta {
+            color: #ddd;
+        }
+    }
+    
     .source-tag {
         background-color: #f0f0f0;
         padding: 0.2rem 0.5rem;
@@ -81,20 +112,54 @@ def display_search_results(response: SearchResponse):
         font-size: 0.8rem;
         color: #666;
     }
+    
+    @media (prefers-color-scheme: dark) {
+        .source-tag {
+            background-color: #444;
+            color: #ccc;
+        }
+    }
+    
     .result-link {
         word-break: break-all;
         color: #1976d2;
         text-decoration: none;
     }
+    
+    @media (prefers-color-scheme: dark) {
+        .result-link {
+            color: #64b5f6;
+        }
+    }
+    
     .result-link:hover {
         text-decoration: underline;
     }
+    
     .password {
         font-family: monospace;
         background-color: #f5f5f5;
         padding: 0.1rem 0.3rem;
         border-radius: 3px;
         font-weight: bold;
+        color: #333;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        .password {
+            background-color: #444;
+            color: #fff;
+        }
+    }
+    
+    strong {
+        color: #333;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        strong {
+            color: #ddd;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
